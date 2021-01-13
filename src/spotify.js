@@ -11,13 +11,13 @@ const scope=[
 ];
 export const uri=`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope.join("%20")}&response_type=token&show_dialog=true`
 export const getTokenFromUrl=()=>{
-    return window.location.hash
-    .substring(1)
-    .split('&')
-    .reduce((initial,item)=>{
-        let parts =item.split('=');
-        initial[parts[0]]=decodeURIComponent(parts[1]);
-        return initial;
-    },{}
-    );
+      const url = window.location.hash;
+      const access_token = url.split('&')
+      .filter((x)=>{
+          if(x.match('access_token')!=='null')
+          return true;
+        })[0]
+      .split('=')[1];
+      return access_token;
+
 }

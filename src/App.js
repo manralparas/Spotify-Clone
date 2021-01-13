@@ -17,8 +17,8 @@ function App() {
   const [{user,token},dispatch]=useDataLayerValue();
   useEffect(()=>{
 
-    const hash=getTokenFromUrl();
-    const _token=hash.access_token;
+    // const hash=getTokenFromUrl();
+    const _token=getTokenFromUrl();
     window.location.hash="";
     if(_token)
     {

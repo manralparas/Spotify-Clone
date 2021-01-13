@@ -4,7 +4,7 @@ import {Avatar} from "@material-ui/core";
 import './Header.css';
 import { useDataLayerValue } from './DataLayer';
 function Header() {
-    const [{user},dispatch]=useDataLayerValue();
+    const [{user}]=useDataLayerValue();
     return (
         <div className="header">
            <div className="header__left">
@@ -14,7 +14,7 @@ function Header() {
 
            </div>
            <div className="header__right">
-            <Avatar src={user?.images[0]?.url} alt="PM" />
+            <Avatar src={user?.images[0]?.url} alt="paras" />
             <h4>{user?.display_name}</h4>
            </div>
         </div>
