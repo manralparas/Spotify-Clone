@@ -1,3 +1,8 @@
+# Spotify Clone
+###Used Spotify web api to make Front end of Spotify using ReactJs 
+###Used Contex api for state management of react app
+###Used Material ui for material components
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
