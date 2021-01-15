@@ -1,7 +1,7 @@
 # Spotify Clone
-###Used Spotify web api to make Front end of Spotify using ReactJs 
-###Used Contex api for state management of react app
-###Used Material ui for material components
+### Used Spotify web api to make Front end of Spotify using ReactJs 
+### Used Contex api for state management of react app
+### Used Material ui for material components
 
 # Getting Started with Create React App
 
