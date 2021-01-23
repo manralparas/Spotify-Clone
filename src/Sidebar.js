@@ -14,8 +14,17 @@ const [{user,playlists},dispatch]= useDataLayerValue();
         <img  className="sidebar__logo"
         src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt='spotifyLogo' />
         <SidebarOption Icon={HomeIcon} title="Home" />
-        <SidebarOption Icon={LibraryMusicIcon} title="Search" />
-        <SidebarOption Icon={SearchIcon} title="Your Library" />
+      <div onClick={()=>{dispatch({
+           type:"SET_SEARCH",
+           search:[]
+       })
+
+      }}> <SidebarOption Icon={SearchIcon} title="Search" /> </div> 
+       
+       <div onClick={()=>{dispatch({
+           type:"SET_SEARCH",
+           search:null
+       })}}><SidebarOption Icon={LibraryMusicIcon} title="Your Library"  /></div> 
 
         <br />
         <strong className="sidebar__title">PLAYLISTS</strong>

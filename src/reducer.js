@@ -5,10 +5,12 @@ export const initialState={
     item:null,
     token:null,
     discover_weekly:null,
+    search:null,
+
 };
 const reducer=(state,action)=>{
 
-    console.log(action);
+//    console.log(action);
     switch(action.type)
     {
         case 'SET_USER':
@@ -37,6 +39,11 @@ const reducer=(state,action)=>{
                  ...state,
                   item: action.item,
             }; 
+        case "SET_SEARCH":
+            return {
+                ...state,
+                search:action.search
+            };
         default :
         return state;
 
