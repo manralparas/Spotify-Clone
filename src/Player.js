@@ -11,7 +11,7 @@ function Player({spotify}) {
     return (
         <div className="player">
         <div className="player_body">
-            <Sidebar />
+            <Sidebar spotify={spotify} />
            {search?(<BodySearch spotify={spotify}/> ): <Body spotify={spotify}/>}
         </div>
         <Footer spotify={spotify}/>

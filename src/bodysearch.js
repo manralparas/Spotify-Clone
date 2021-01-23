@@ -28,23 +28,37 @@ function BodySearch({spotify}) {
   };
 
   const playSong = (id) => {
-    console.log(`currenly playing ${id}`)
-    spotify
-      .play({
-        uris: [`spotify:track:${id}`],
-      })
-      .then((res) => {
-        spotify.getMyCurrentPlayingTrack().then((r) => {
-          dispatch({
+    console.log(spotify.getTrack(id));
+    //if spotify user is not premium user (playback is authorized)
+     spotify.getTrack(id).then((r)=>{
+           dispatch({
             type: "SET_ITEM",
-            item: r.item,
+            item: r,
           });
           dispatch({
             type: "SET_PLAYING",
             playing: true,
           });
-        });
-      });
+       })
+
+
+    //If spotify user is premium user for playback support
+    // spotify
+    //   .play({
+    //     uris: [`spotify:track:${id}`],
+    //   })
+    //   .then((res) => {
+    // spotify.t().then((r) => {
+    //       dispatch({
+    //         type: "SET_ITEM",
+    //         item: r.item,
+    //       });
+    //       dispatch({
+    //         type: "SET_PLAYING",
+    //         playing: true,
+    //       });
+    //     });
+  //     });
   };
     return (
 

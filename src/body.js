@@ -28,23 +28,36 @@ function Body({spotify}) {
   };
 
   const playSong = (id) => {
-    console.log(`currenly playing ${id}`)
-    spotify
-      .play({
-        uris: [`spotify:track:${id}`],
-      })
-      .then((res) => {
-        spotify.getMyCurrentPlayingTrack().then((r) => {
-          dispatch({
+    
+    
+    spotify.getTrack(id).then((r)=>{
+           dispatch({
             type: "SET_ITEM",
-            item: r.item,
+            item: r,
           });
           dispatch({
             type: "SET_PLAYING",
             playing: true,
           });
-        });
-      });
+       })
+//For premium user
+    // console.log(`currenly playing ${id}`)
+    // spotify
+    //   .play({
+    //     uris: [`spotify:track:${id}`],
+    //   })
+    //   .then((res) => {
+    //     spotify.getMyCurrentPlayingTrack().then((r) => {
+    //       dispatch({
+    //         type: "SET_ITEM",
+    //         item: r.item,
+    //       });
+    //       dispatch({
+    //         type: "SET_PLAYING",
+    //         playing: true,
+    //       });
+    //     });
+    //   });
   };
     return (
 

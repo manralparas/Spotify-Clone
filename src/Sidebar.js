@@ -6,14 +6,26 @@ import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
 import SearchIcon from '@material-ui/icons/Search';
 import {useDataLayerValue} from './DataLayer';
 
-export default function Sidebar() {
-const [{user,playlists},dispatch]= useDataLayerValue();
+export default function Sidebar({spotify}) {
+const [{playlists},dispatch]= useDataLayerValue();
 
     return (
         <div className="sidebar">
         <img  className="sidebar__logo"
         src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt='spotifyLogo' />
-        <SidebarOption Icon={HomeIcon} title="Home" />
+       <div onClick={()=>{
+           console.log( spotify.getRecommendations({limit:20,seed_genres:'EDM POP',seed_artists:['06HL4z0CvFAxyc27GXpf02','74XFHRwlV6OrjEM0A2NCMF']})
+  )
+           spotify.getRecommendations({limit:20,seed_genres:'EDM POP',seed_artists:['06HL4z0CvFAxyc27GXpf02','74XFHRwlV6OrjEM0A2NCMF']})
+            .then((data)=>dispatch({
+                type:"SET_SEARCH",
+                search:data.tracks
+            }))
+        }
+        }> 
+       <SidebarOption Icon={HomeIcon} title="Home" />
+       </div>
+
       <div onClick={()=>{dispatch({
            type:"SET_SEARCH",
            search:[]
