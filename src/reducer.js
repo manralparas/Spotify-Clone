@@ -6,6 +6,7 @@ export const initialState={
     token:null,
     discover_weekly:null,
     search:null,
+    home:false
 
 };
 const reducer=(state,action)=>{
@@ -43,6 +44,11 @@ const reducer=(state,action)=>{
             return {
                 ...state,
                 search:action.search
+            };
+        case "SET_HOME":
+            return {
+                ...state,
+                home:action.home
             };
         default :
         return state;

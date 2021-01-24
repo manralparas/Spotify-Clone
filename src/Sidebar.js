@@ -16,6 +16,10 @@ const [{playlists},dispatch]= useDataLayerValue();
        <div onClick={()=>{
            console.log( spotify.getRecommendations({limit:20,seed_genres:'EDM POP',seed_artists:['06HL4z0CvFAxyc27GXpf02','74XFHRwlV6OrjEM0A2NCMF']})
   )
+                dispatch({
+                    type:"SET_HOME",
+                    home:false
+                });
            spotify.getRecommendations({limit:20,seed_genres:'EDM POP',seed_artists:['06HL4z0CvFAxyc27GXpf02','74XFHRwlV6OrjEM0A2NCMF']})
             .then((data)=>dispatch({
                 type:"SET_SEARCH",
@@ -36,7 +40,12 @@ const [{playlists},dispatch]= useDataLayerValue();
        <div onClick={()=>{dispatch({
            type:"SET_SEARCH",
            search:null
-       })}}><SidebarOption Icon={LibraryMusicIcon} title="Your Library"  /></div> 
+       })
+        dispatch({
+            type:"SET_HOME",
+            home:true
+        })
+       }}><SidebarOption Icon={LibraryMusicIcon} title="Your Library"  /></div> 
 
         <br />
         <strong className="sidebar__title">PLAYLISTS</strong>

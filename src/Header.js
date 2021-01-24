@@ -15,6 +15,10 @@ function Header({spotify}) {
                     type:"SET_SEARCH",
                     search:data.tracks.items
                 });
+                dispatch({
+                    type:"SET_HOME",
+                    home:true
+                })
             Setquery('');
             
             })
