@@ -1,5 +1,5 @@
 export const authEndpoint="http://accounts.spotify.com/authorize";
-const redirectUri="http://localhost:3000";
+const redirectUri="http://spotify-react-project-00.herokuapp.com";
 const clientId="00e9db42e4d74b40bc28dd29b3e499dd";
 const scope=[
     "user-read-currently-playing",
