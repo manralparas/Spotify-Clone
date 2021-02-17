@@ -1,8 +1,32 @@
-# Spotify Clone
-### Used Spotify web api to make Front end of Spotify using ReactJs 
-### Used Contex api for state management of react app
-### Used Material ui for material components
+## Spotify Clone
+<br/>
+React based front-end of spotify using spotify-web-api with limited functions like fetching account , top-track, playlist, searching, play (premium account needed uncomment play code for premium playback)
+<br/>
+Used Spotify web api to make Front end of Spotify using ReactJs 
+<br/>
+Used Contex api for state management of react app
+<br/>
+Used Material ui for material components
+<br/>
+<br/>
+<br/>
 
+![Screenshot from 2021-02-17 20-06-34](https://user-images.githubusercontent.com/35651201/108219817-177e1180-715c-11eb-81b1-f1fba9e6712e.png)
+<br/>
+<br/>
+<br/>
+![Screenshot from 2021-02-17 20-06-56](https://user-images.githubusercontent.com/35651201/108219848-1d73f280-715c-11eb-92cd-1161944c5ff7.png)
+<br/>
+<br/>
+<br/>
+![Screenshot from 2021-02-17 20-08-34](https://user-images.githubusercontent.com/35651201/108219872-25cc2d80-715c-11eb-9446-be43a634724a.png)
+<br/>
+<br/>
+<br/>
+![Screenshot from 2021-02-17 20-09-26](https://user-images.githubusercontent.com/35651201/108219896-2d8bd200-715c-11eb-90b1-cde44a164237.png)
+<br/>
+<br/>
+<br/>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
